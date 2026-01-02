@@ -22,3 +22,11 @@ First call result before got handover to rust: 42
 Second call result after got handover to rust: 42
 Third call result after loading new version of library: 67
 ```
+
+same project IR can also work standalone
+```
+vscode ➜ /online_change_poc $ clang -static project1.ll -o project1
+vscode ➜ /online_change_poc $ ./project1
+vscode ➜ /online_change_poc $ echo $?
+42
+```
